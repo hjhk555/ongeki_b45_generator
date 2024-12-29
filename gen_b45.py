@@ -163,6 +163,6 @@ if __name__ == '__main__':
         width_offset = bg_width_spacing+(i%5)*(card_width+elem_width_spacing)
         height_offset = bg_height_spacing+2*(font_size_large+elem_height_spacing)+(i//5+6)*(card_height+elem_height_spacing)
         draw_score(img_background, image_draw, new15[i], width_offset, height_offset)
-    img_background = img_background.crop((0, 0, total_width, total_height))
+    img_background = img_background.crop((0, 0, min(total_width, bg_width), min(total_height, bg_height)))
     img_background.save(b45_filename)
     print(f'成绩已保存为{b45_filename}')
