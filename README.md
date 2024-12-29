@@ -1,6 +1,6 @@
 # 音击B45生成器
 
-公开仓库：
+公开仓库：https://github.com/hjhk555/ongeki_b45_generator
 
 ## 运行环境
 
