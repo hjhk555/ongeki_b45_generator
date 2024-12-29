@@ -1,0 +1,12 @@
+# database
+*.sqlite
+
+# pic
+song_pics/
+copm_pics/
+
+# score table
+*.xlsx
+
+# b45 pics
+*.png

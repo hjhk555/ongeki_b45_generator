@@ -1,0 +1,105 @@
+# 文件系统
+
+# 数据库名称
+db_name: levels.sqlite
+# 定数表名称
+table_name_level: levels
+# 常规新歌表名称
+table_name_new: new_songs
+# 白铺新歌表名称
+table_name_lun_new: new_lun_songs
+# 曲绘文件夹
+pic_dir: song_pics
+# 压缩曲绘文件夹
+compress_pic_dir: comp_pics
+# 成绩表文件名
+score_table_filename: score.xlsx
+# B45文件名
+b45_filename: b45.png
+
+# 谱面数据拉取
+
+# 全量加载（清空数据库并加载全部谱面，否则仅加载数据库中不存在的谱面）
+full_load: false
+# 指定加载（加载指定的url）
+specify_load: false
+# 指定加载url列表
+specify_urls:
+- example.com
+# 页面加载重试
+retry_times: 3
+# 主页面加载时长（秒）
+main_load_time: 5
+# 歌曲详情页面加载时长（秒）
+song_load_time: 2
+# 难度名称
+difficulty_names: [BASIC, ADVANCED, EXPERT, MASTER, LUNATIC]
+# 音击wiki的url
+wiki_songs_url: https://wikiwiki.jp/gameongeki/%E6%A5%BD%E6%9B%B2%E4%B8%80%E8%A6%A7
+# 全曲页面XPath
+# 歌曲链接XPath（不包含单角色翻唱）
+xpath_all_song_link: //tbody/tr[@role="row"]/td[1]/a
+# 常规新歌XPath
+xpath_new_song_link: //td[contains(@style, "background-color:lightyellow")]/../td[1][not(contains(@style, "background-color:white"))]/a
+# 白谱新歌XPath
+xpath_new_lun_song_link: //td[contains(@style, "background-color:lightyellow")]/../td[1][contains(@style, "background-color:white")]/a
+# 歌曲页面XPath
+# 标题XPath
+xpath_song_title: //th[text()="タイトル"]/../td
+# 封面XPath
+xpath_song_img: //tr/td/a[@title!="FrontPage"]/img
+# 难度表XPath
+xpath_song_difficulty_table: //th[text()="難易度"]/../../../tbody
+
+# 成绩表格生成
+
+# 表头
+title_row: [曲绘, 标题, 难度, 难度系数, 定数, 成绩, rating, FC/AB, FB, 新曲]
+# 各列宽度
+column_width: [8, 60, 12, 12, 8, 16, 12, 8, 8, 8]
+# 行高
+row_height: 45
+# 各难度字体颜色
+difficulty_color: [29ff00, ffdb00, ff0000, a700ff, '949494']
+# 列号
+column_img: A
+column_title: B
+column_difficulty: C
+column_level: D
+column_level_base: E
+column_score: F
+column_rating: G
+column_combo: H
+column_bell: I
+column_new: J
+
+# B45生成
+
+# 难度背景色号
+difficulty_background_color: [[41, 255, 0], [255, 219, 0], [255, 0, 0], [167, 0, 255], [145, 145, 145]] 
+# 难度文字色号
+difficulty_font_color: [[255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 0, 0]] 
+# 歌名字号
+font_size_song_name: 18
+# 小字号
+font_size_small: 15
+# 中字号
+font_size_medium: 30
+# 大字号
+font_size_large: 50
+# 背景左右间距
+bg_width_spacing: 50
+# 背景上下间距
+bg_height_spacing: 30
+# 元素左右间距
+elem_width_spacing: 40
+# 元素上下间距
+elem_height_spacing: 30
+# 谱面卡片宽度
+card_width: 270
+# 谱面卡片高度
+card_height: 125
+# 铺面卡片元素左右间距
+card_elem_width_spacing: 15
+# 铺面卡片元素上下间距
+card_elem_height_spacing: 10
