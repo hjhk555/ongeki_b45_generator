@@ -186,6 +186,7 @@ if __name__ == '__main__':
             failed_urls.append(song_url)
 
     driver.quit()
+    print("加载完成")
     if len(failed_urls) > 0:
         print('以下铺面加载失败：')
         for id in failed_urls:

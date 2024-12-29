@@ -102,7 +102,7 @@ def draw_score(img_bg: Image.Image, img_draw: ImageDraw.ImageDraw, score: Score,
         line_index += 1
     # 打印成绩
     img_draw.text((x_offset+pic_size+card_elem_width_spacing, y_offset+card_height-font_size_small-card_elem_height_spacing-font_size_medium), str(score.score), font=font_medium, fill='black')
-    img_draw.text((x_offset+pic_size+card_elem_width_spacing, y_offset+card_height-font_size_small), f'{score.base} -> {score.rating}', font=font_small, fill='black')
+    img_draw.text((x_offset+pic_size+card_elem_width_spacing, y_offset+card_height-font_size_small), f'{score.base:.1f} -> {score.rating:.3f}', font=font_small, fill='black')
 
 if __name__ == '__main__':
     # 读取成绩表
@@ -150,9 +150,9 @@ if __name__ == '__main__':
     bg_rating_width_spacing = rating_width_spacing*2
 
     # rating
-    image_draw.text((bg_rating_width_spacing, bg_height_spacing), f'B45:{rating_b45}', font=font_large, fill='black')
-    image_draw.text((bg_rating_width_spacing+rating_width+rating_width_spacing, bg_height_spacing), f'B30:{rating_b30}', font=font_large, fill='black')
-    image_draw.text(((total_width-rating_width)/2, bg_height_spacing+7*elem_height_spacing+6*card_height+font_size_large), f'N15:{rating_n15}', font=font_large, fill='black')
+    image_draw.text((bg_rating_width_spacing, bg_height_spacing), f'B45:{rating_b45:.3f}', font=font_large, fill='black')
+    image_draw.text((bg_rating_width_spacing+rating_width+rating_width_spacing, bg_height_spacing), f'B30:{rating_b30:.3f}', font=font_large, fill='black')
+    image_draw.text(((total_width-rating_width)/2, bg_height_spacing+7*elem_height_spacing+6*card_height+font_size_large), f'N15:{rating_n15:.3f}', font=font_large, fill='black')
     # b30
     for i in range(len(best30)):
         width_offset = bg_width_spacing+(i%5)*(card_width+elem_width_spacing)

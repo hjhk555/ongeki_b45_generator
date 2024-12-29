@@ -3,10 +3,13 @@
 
 # pic
 song_pics/
-copm_pics/
+comp_pics/
 
 # score table
 *.xlsx
 
 # b45 pics
 *.png
+
+# release
+release/
